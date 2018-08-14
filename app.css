@@ -1,0 +1,114 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+  background: black;
+  /* background: #f7d85f; */
+	color: white;
+  font-family: times;
+}
+
+a {
+	color :white;
+}
+
+body {
+  margin: 0;
+}
+
+header,
+footer {
+	text-align: center;
+	background: url('assets/front.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: black;
+	padding: 7rem 3rem 1rem;
+}
+
+header a,
+footer a {
+	background: black;
+}
+
+footer {
+	background-position: bottom center;
+	padding: 1rem 3rem 10rem;
+}
+
+h1,h2,h3, p {
+	margin: 1rem 0;
+}
+
+.VideoGrid {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+*:focus {
+	outline: 5px solid red;
+}
+
+.VideoGrid > * {
+	width: 100%;
+  /* border: 2px solid #f7d85f; */
+  border: 1px solid #222;
+}
+
+@media (min-width: 600px) {
+  .VideoGrid > * {
+    flex: 50%;
+  }
+
+  .VideoGrid > :nth-child(3n) {
+    flex: 33.3333%;
+  }
+}
+
+/* @media (min-width: 1024px) { */
+/*   .VideoGrid > * { */
+/*     flex: 33.33333%; */
+/*   } */
+/* } */
+/* @media (min-width: 1450px) { */
+/*   .VideoGrid > * { */
+/*     flex: 25%; */
+/*   } */
+/* } */
+
+video-placeholder > button {
+  font-family: inherit;
+  /* display: flex; */
+}
+
+video-placeholder > button img {
+}
+
+video-placeholder > button h2 {
+  position: absolute;
+	top: 0;
+  z-index: 1;
+	margin: 1em;
+  color: white;
+	font-weight: normal;
+	letter-spacing: 0.05em;
+}
+
+.PlayButton {
+  position: absolute;
+	top: 0;
+	left: 0;
+  padding: 1em calc(50% - 40px);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 150ms;
+  background-image: linear-gradient(#000, transparent);
+}
+
+video-placeholder:hover .PlayButton,
+video-placeholder:focus .PlayButton {
+  opacity: 1;
+  /* background-image: linear-gradient(transparent, #000); */
+}
