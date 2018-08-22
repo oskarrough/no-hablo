@@ -1,5 +1,5 @@
 html {
-  background: #191919;
+  background: black;
   color: white;
   font-family: system-ui, segoe ui, sans-serif;
 }
@@ -12,7 +12,7 @@ h1,
 h2,
 h3 {
   font-size: 1rem;
-} 
+}
 h1,
 h2,
 h3,
@@ -34,14 +34,19 @@ article video-placeholder {
 }
 
 *:focus {
-  outline: 5px solid red;
+  outline: 3px solid #f7d85f;
 }
 
 .VideoGrid > * {
+  position: relative;
   width: 100%;
-  padding: 1rem;
+  padding: 0.6rem;
   /* border: 2px solid #f7d85f; */
   /* border: 1px solid #222; */
+}
+
+.VideoGrid a {
+  text-decoration: none;
 }
 
 @media (min-width: 600px) {
@@ -70,23 +75,36 @@ video-placeholder > button {
   /* display: flex; */
 }
 
-video-placeholder > button img {
+.VideoGrid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: center;
+	transition: opacity .275s cubic-bezier(0.19,1,.22,1);
+	opacity: 0.75;
+  /* filter: brightness(90%); */
+	/* transition: brightness 200ms; */
 }
 
-video-placeholder > button h2 {
+.VideoGrid > *:hover img {
+  filter: brightness(130%);
+	opacity: 1;
+}
+
+.VideoGrid h2 {
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 0.3rem;
+  bottom: 1rem;
   z-index: 1;
   margin: 0;
   padding: 1em;
   color: white;
   font-weight: normal;
   letter-spacing: 0.05em;
-	transition: background 150ms linear, color 150ms linear;
+  /* transition: background 150ms linear, color 150ms linear; */
 }
 
-video-placeholder:hover button h2 {
+.VideoGrid > *:hover h2 {
   background: black;
   color: #f7d85f;
 }
@@ -100,21 +118,24 @@ video-placeholder:hover button h2 {
   height: 100%;
   opacity: 0;
   transition: opacity 200ms;
-  background-image: linear-gradient(#000, transparent);
 }
 
 .PlayButton circle {
   transform: scale(0.97);
-  transition: transform 100ms ease-in;
   transform-origin: center;
+	transition: transform .275s cubic-bezier(0.19,1,.22,1);
 }
 
-video-placeholder:hover .PlayButton circle {
+.VideoGrid > *:hover .PlayButton circle {
   transform: scale(1);
 }
 
-video-placeholder:hover .PlayButton,
-video-placeholder:focus .PlayButton {
+.VideoGrid > *:hover .PlayButton,
+.VideoGrid > *:focus .PlayButton {
   opacity: 1;
-  /* background-image: linear-gradient(transparent, #000); */
+  background-image: radial-gradient(hsla(0, 0%, 0%, 0.4) 8%, transparent 50%);
+}
+
+.mfp-iframe-holder .mfp-content {
+  max-width: 95%;
 }

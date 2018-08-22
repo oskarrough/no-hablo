@@ -21,6 +21,14 @@
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
 
+		<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+
+		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css"> -->
+		<!-- <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script> -->
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+
 		<!-- app dependencies -->
 		<!-- If you include this polyfill, it'll work in Edge and Firefox too! -->
 		<script src="https://cdn.jsdelivr.net/npm/document-register-element@1.11.0/build/document-register-element.js">/* W3C Custom Elements */</script>
@@ -37,32 +45,30 @@
 	<body>
 
 		<!-- <header class="fixed z-10 pin-t pin-l w-full"> -->
-		<header class="m-4 flex flex-row items-center">
-			<img src="assets/front.jpg" alt="The album cover" width="120" class="mr-5">
+		<header class="my-16 mx-8 flex flex-row items-center">
+			<img src="assets/front.jpg" alt="The album cover" width="140" class="mr-5">
 			<div>
 				<h1 class="m-0 mb-4 font-normal">
-					<span class="font-bold">Max Graef</span><br>
-					Lo siento mucho pero no hablo tu idioma
+					<strong>
+						Lo siento mucho pero no hablo tu idioma
+					</strong><br>
+					Max Graef
 				</h1>
-				<a href="#">Order the album</a>
-				<!-- and enjoy the visual snippets below… -->
+				<a href="#">Order the album</a><br>
+				<br>
+				Follow on <a href="https://soundcloud.com/max-graef" target="_blank">Soundcloud</a> &amp;
+				<a href="https://www.facebook.com/max.graef.1" target="_blank">Facebook</a>
 			</div>
 		</header>
 
 		<div class="VideoGrid pt-4 px-4 pb-12"></div>
 
 		<footer class="px-5">
-			<p>
-				Follow me on
-				<a href="https://soundcloud.com/max-graef" target="_blank">Soundcloud</a> &amp;
-				<a href="https://www.facebook.com/max.graef.1" target="_blank">Facebook</a>.
-			</p>
-
 			<form action="https://tartelet-records.us3.list-manage.com/subscribe/post?u=913ef4b403923950a338e939d&amp;id=7175f87073" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 				<p>
-					<label for="mce-EMAIL">Tartelet Records Newsletter</label>
-					<input type="email" value="" name="EMAIL" class="ml-2 p-2 bg-grey-dark hover:bg-white required email" id="mce-EMAIL" placeholder="Enter email...">
-					<input type="submit" value="Get it" name="subscribe" id="mc-embedded-subscribe" class="p-2 button">
+					<label for="mce-EMAIL">Get the Tartelet Records newsletter</label><br>
+					<input type="email" value="" name="EMAIL" class="mt-2 p-2 bg-grey-dark hover:bg-white required email" id="mce-EMAIL" placeholder="Enter email...">
+					<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="p-2 button">
 				</p>
 				<div id="mce-responses" class="clear">
 					<div class="response" id="mce-error-response" style="display:none"></div>
