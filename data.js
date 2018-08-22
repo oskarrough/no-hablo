@@ -39,32 +39,38 @@ data.tracks = [
   {
     trackNumber: 'B3',
     title: 'Srrr',
-    youtubeId: 'RaWxiCl8Dn8'
+    youtubeId: 'RaWxiCl8Dn8',
+    gif: 'https://media.giphy.com/media/FDcvH6Icd9WAQRxHHx/giphy.gif'
   },
   {
     trackNumber: 'B4',
     title: 'Midi Lisa',
-    youtubeId: 'RaWxiCl8Dn8'
+    youtubeId: 'RaWxiCl8Dn8',
+    gif: 'https://media.giphy.com/media/3gNowi8xp8PoWwdb0T/giphy.gif'
   },
   {
     trackNumber: 'B5',
     title: 'Funk',
-    youtubeId: 'RaWxiCl8Dn8'
+    youtubeId: 'RaWxiCl8Dn8',
+    gif: 'https://media.giphy.com/media/24FIhzP88RWJoO7Igt/giphy.gif'
   },
   {
     trackNumber: 'B6',
     title: 'Master Quest',
-    youtubeId: 'RaWxiCl8Dn8'
+    youtubeId: 'RaWxiCl8Dn8',
+    gif: 'https://media.giphy.com/media/FDcvH6Icd9WAQRxHHx/giphy.gif'
   },
   {
     trackNumber: 'C1',
     title: 'Y',
-    youtubeId: 'RaWxiCl8Dn8'
+    youtubeId: 'RaWxiCl8Dn8',
+
   },
   {
     trackNumber: 'C2',
     title: 'Arcadia',
-    youtubeId: 'RaWxiCl8Dn8'
+    youtubeId: 'RaWxiCl8Dn8',
+    gif: 'https://media.giphy.com/media/24FIhzP88RWJoO7Igt/giphy.gif'
   },
   {
     trackNumber: 'C3',
@@ -74,12 +80,14 @@ data.tracks = [
   {
     trackNumber: 'C4',
     title: 'Rush',
-    youtubeId: 'RaWxiCl8Dn8'
+    youtubeId: 'RaWxiCl8Dn8',
+    gif: 'https://media.giphy.com/media/Zy7HTSu2oD2f6VZEfl/giphy.gif'
   },
   {
     trackNumber: 'C5',
     title: 'Lozt feat. Ludi',
-    youtubeId: 'RaWxiCl8Dn8'
+    youtubeId: 'RaWxiCl8Dn8',
+    gif: 'https://media.giphy.com/media/3gNowi8xp8PoWwdb0T/giphy.gif'
   },
   {
     trackNumber: 'C6',
@@ -89,7 +97,8 @@ data.tracks = [
   {
     trackNumber: 'D1',
     title: 'Shrimp',
-    youtubeId: 'RaWxiCl8Dn8'
+    youtubeId: 'RaWxiCl8Dn8',
+    gif: 'https://media.giphy.com/media/24FIhzP88RWJoO7Igt/giphy.gif'
   },
   {
     trackNumber: 'D2',
@@ -99,7 +108,8 @@ data.tracks = [
   {
     trackNumber: 'D3',
     title: 'Burning 4 U feat. Chrissley Benz',
-    youtubeId: 'RaWxiCl8Dn8'
+    youtubeId: 'RaWxiCl8Dn8',
+    gif: 'https://media.giphy.com/media/Zy7HTSu2oD2f6VZEfl/giphy.gif'
   },
   {
     trackNumber: 'D4',
