@@ -25,54 +25,46 @@
 		<link href="https://cdn.jsdelivr.net/gh/oskarrough/video-placeholder/video-placeholder.css" rel="stylesheet">
 		<script src="https://cdn.jsdelivr.net/gh/oskarrough/video-placeholder/video-placeholder.js" async></script>
 		<script src="https://cdn.jsdelivr.net/npm/hyperhtml@2/umd.js"></script>
-
-		<!-- app -->
-		<link rel="stylesheet" href="app.css">
 		<script src="data.js"></script>
 		<script src="app.js"></script>
+
+		<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/preflight.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="app.css">
+		<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css" rel="stylesheet">
 	</head>
 	<body>
 
-		<header>
-			<h1>Max Graef - Lo siento mucho pero no hablo tu idioma</h1>
-			<menu>
-				<!-- <a href="#">Turn on radio</a><br> -->
-				<a href="#">COMING SOON! Order vinyl and digital album</a>
-			</menu>
-			<!-- <p>Or watch some audio visual samples below:</p> -->
+		<!-- <header class="fixed z-10 pin-t pin-l w-full"> -->
+		<header class="flex flex-row items-center">
+			<img src="assets/front.jpg" alt="The album cover" width="100" class="mr-5">
+			<div>
+			<h1 class="m-0 mb-4">Max Graef<br>Lo siento mucho pero no hablo tu idioma</h1>
+			<a href="#">Order album</a>
+			</div>
 		</header>
 
-		<div class="VideoGrid"></div>
+		<div class="VideoGrid pt-4 px-4 pb-12"></div>
 
-		<!-- <p><pre> -->
-		<!-- Share/spam button on each video -->
-		<!-- Send video as postcard (greetings from Max & ?? via mailto: link) -->
-		<!-- </pre></p> -->
-		<footer>
+		<footer class="px-5">
 			<p>
 				Follow me on
 				<a href="https://soundcloud.com/max-graef" target="_blank">Soundcloud</a> &amp;
 				<a href="https://www.facebook.com/max.graef.1" target="_blank">Facebook</a>.
 			</p>
-
-			<!-- Mailchimp newsletter start -->
-			<p><strong>Get the Tartelet Records Newsletter</strong></h2>
-			<div id="mc_embed_signup">
-				<form action="https://tartelet-records.us3.list-manage.com/subscribe/post?u=913ef4b403923950a338e939d&amp;id=7175f87073" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-					<p>
-						<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
-						<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-					</p>
-					<div id="mce-responses" class="clear">
-						<div class="response" id="mce-error-response" style="display:none"></div>
-						<div class="response" id="mce-success-response" style="display:none"></div>
-					</div>
-					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_913ef4b403923950a338e939d_7175f87073" tabindex="-1" value=""></div>
-					</div>
-				</form>
-			</div>
-			<!-- Mailchimp newsletter end -->
+			<p></p>
+			<form action="https://tartelet-records.us3.list-manage.com/subscribe/post?u=913ef4b403923950a338e939d&amp;id=7175f87073" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<p>
+					<label for="mce-EMAIL">Get the Tartelet Records Newsletter</label>
+					<input type="email" value="" name="EMAIL" class="ml-2 p-2 required email" id="mce-EMAIL" placeholder="Enter email...">
+					<input type="submit" value="Get it!" name="subscribe" id="mc-embedded-subscribe" class="p-2 button">
+				</p>
+				<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" style="display:none"></div>
+					<div class="response" id="mce-success-response" style="display:none"></div>
+				</div>
+				<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_913ef4b403923950a338e939d_7175f87073" tabindex="-1" value=""></div>
+			</form>
+			<br>
 		</footer>
 
 	</body>

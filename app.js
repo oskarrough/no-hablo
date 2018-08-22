@@ -17,7 +17,9 @@ class VideoGrid extends Component {
 					<video-placeholder>
 						<button is="video-placeholder-front">
 							<img src="${item.gif ? item.gif : fallback}" alt="${item.title}">
-							<h2>${item.title}</h2>
+							<h2>
+								<span class="opacity-50">${item.trackNumber}</span> ${item.title}
+							</h2>
 							<svg class="PlayButton" viewBox="0 0 200 200" alt="Play video">
 								<circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="#fff" />
 								<polygon points="70, 55 70, 145 145, 100" fill="#fff" />
