@@ -83,6 +83,7 @@ video-placeholder > button h2 {
   color: white;
   font-weight: normal;
   letter-spacing: 0.05em;
+	transition: background 150ms linear, color 150ms linear;
 }
 
 video-placeholder:hover button h2 {
@@ -98,13 +99,13 @@ video-placeholder:hover button h2 {
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 150ms;
+  transition: opacity 200ms;
   background-image: linear-gradient(#000, transparent);
 }
 
 .PlayButton circle {
-  transform: scale(0.95);
-  transition: transform 150ms ease-in;
+  transform: scale(0.97);
+  transition: transform 100ms ease-in;
   transform-origin: center;
 }
 
