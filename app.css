@@ -1,7 +1,11 @@
 html {
   background: black;
-  color: white;
+  color: antiquewhite;
   font-family: system-ui, segoe ui, sans-serif;
+}
+
+input[type="submit"] {
+	background-color: antiquewhite;
 }
 
 a {
@@ -13,6 +17,7 @@ h2,
 h3 {
   font-size: 1rem;
 }
+
 h1,
 h2,
 h3,
@@ -22,6 +27,7 @@ p {
 
 h1 {
   font-smoothing: antialiased;
+	color: antiquewhite;
 }
 
 .VideoGrid {
