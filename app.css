@@ -25,8 +25,14 @@ header h1 {
 header h1 {
 	animation: rainbow 100s infinite;
 }
-
 @keyframes rainbow {
+	0% {color: #81b45b; }
+	10% { color: #f3b8b0; }
+	20% { color: #41993c; }
+	30% { color: #ea8611;}
+}
+
+@keyframes rainbow-everland {
 	0% {color: hsl(330, 2%, 19%);}
 	10% {color: hsl(52, 100%, 50%);}
 	20% {color: hsl(186, 55%, 68%);}
@@ -42,12 +48,8 @@ header h2 {
 .OrderButton {
 	display: block;
 	font-weight: bold;
-  /* background: #f7d85f; */
-	/* color: black; */
 	text-decoration: none;
-	padding: 1em 0 0;
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
+	padding: 0.5em 0 0;
 	color: #f19eae;
 }
 
@@ -185,4 +187,8 @@ article video-placeholder {
 .fancybox-active .VideoGrid img {
   /* hide gifs while in fullscreen mode for performance */
   visibility: hidden;
+}
+
+footer svg {
+	max-width: 2rem;
 }
