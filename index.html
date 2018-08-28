@@ -35,8 +35,26 @@
 	<body>
 
 		<!-- <img width="200" class="TarteletLogo" src="assets/tartelet-records-logo.svg" alt="Tartelet Records"> -->
+		<aside class="Order pt-5 fixed pin-t z-20">
+			<button class="mr-5 float-right js-toggleOrder">X</button>
+			<div class="min-h-screen flex flex-col">
+				<div class="ml-5">
+					<p class="max-w-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui veritatis quasi distinctio error ullam reiciendis doloremque fuga, natus sequi cumque! Quod, repellendus, reiciendis. Numquam enim atque debitis odio dolorum, architecto.</p>
+					<p>
+						<a href="#">Order on Bandcamp</a><br>
+						<a href="#">Order on Something Else</a>
+					</p>
+				</div>
+				<figure class="flex flex-row items-start mt-auto mb-5">
+					<img src="assets/mockups/Max_Album_Back.jpg" alt="">
+					<img src="assets/mockups/Max_Album_Front_01.jpg" alt="">
+					<img src="assets/mockups/Max_Album_Front.jpg" alt="">
+					<img src="assets/mockups/Max_Album_Vinyl.jpg" alt="">
+				</figure>
+			</div>
+		</aside>
 
-		<header class="my-16 mx-8 flex flex-row items-start justify-center">
+		<header class="my-16 mx-8 flex flex-row items-start justify-center text-center">
 			<div>
 				<h2 class="mb-0 font-normal">
 					Max Graef
@@ -45,7 +63,7 @@
 					Lo siento mucho pero<br>no hablo tu idioma
 				</h1>
 			</div>
-			<div class="ml-5">
+			<div class="ml-6 js-toggleOrder">
 				<img src="assets/front.jpg" alt="The album cover" width="240" class="">
 				<a class="OrderButton" href="#">Order album</a>
 			</div>

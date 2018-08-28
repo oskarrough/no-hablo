@@ -54,6 +54,17 @@ function init() {
       return count + caption
     }
   })
+
+  var $overlay = $('.Order')
+  var $overlayButtons = $('.js-toggleOrder')
+  $overlayButtons.on('click', () => {
+    $overlay.toggleClass('is-open')
+  })
+  $('body').keydown((event) => {
+    if (event.key === 'Escape' && $overlay.hasClass('is-open')) {
+      $overlay.removeClass('is-open')
+    }
+  })
 }
 
 document.addEventListener('DOMContentLoaded', init)

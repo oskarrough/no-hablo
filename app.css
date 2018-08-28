@@ -1,3 +1,22 @@
+.Order {
+  background: #ced0cd;
+  color: black;
+  transform: translateY(-100%);
+  transition: transform 500ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.Order.is-open {
+  transform: translateY(0);
+}
+
+.Order img {
+  width: 25%;
+}
+
+.Order a {
+  color: black;
+}
+
 html {
   background: black;
   color: antiquewhite;
@@ -12,45 +31,45 @@ a {
   color: #f7d85f;
 }
 
-
 header {
-	text-align: center;
+  text-align: center;
 }
 
 header h1 {
-	font-size: 4rem;
-	font-size: 6vw;
+  font-size: 4rem;
+  font-size: 6vw;
+  line-height: 1;
+  animation: rainbow 60s infinite;
 }
 
-header h1 {
-	animation: rainbow 100s infinite;
-}
 @keyframes rainbow {
-	0% {color: #81b45b; }
-	10% { color: #f3b8b0; }
-	20% { color: #41993c; }
-	30% { color: #ea8611;}
-}
-
-@keyframes rainbow-everland {
-	0% {color: hsl(330, 2%, 19%);}
-	10% {color: hsl(52, 100%, 50%);}
-	20% {color: hsl(186, 55%, 68%);}
-	30% {color: hsl(254, 38%, 46%);}
-	40% {color: hsl(8, 88%, 60%);}
-	50% {color: hsl(4, 90%, 84%);}
+  0% {
+    color: antiquewhite;
+  }
+  20% {
+    color: #81b45b;
+  }
+  40% {
+    color: #f3b8b0;
+  }
+  60% {
+    color: #41993c;
+  }
+  80% {
+    color: #ea8611;
+  }
 }
 
 header h2 {
-	font-size: 2rem;
+  font-size: 2rem;
 }
 
 .OrderButton {
-	display: block;
-	font-weight: bold;
-	text-decoration: none;
-	padding: 0.5em 0 0;
-	color: #f19eae;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5em 0 0;
+  color: #f19eae;
 }
 
 h1,
@@ -125,7 +144,7 @@ article video-placeholder {
   z-index: 1;
   margin: 0;
   padding: 1em;
-  color: white;
+  color: antiquewhite;
   font-weight: normal;
   letter-spacing: 0.05em;
 }
@@ -190,5 +209,5 @@ article video-placeholder {
 }
 
 footer svg {
-	max-width: 2rem;
+  max-width: 2rem;
 }
