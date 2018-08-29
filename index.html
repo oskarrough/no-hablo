@@ -22,12 +22,15 @@
 		<meta name="theme-color" content="#ffffff">
 
 		<!-- app scripts and styles -->
+		<link href="https://fonts.googleapis.com/css?family=Gentium+Basic:400,400i,700" rel="stylesheet">
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+
 		<script src="https://cdn.jsdelivr.net/npm/hyperhtml@2/umd.js"></script>
 		<script src="data.js"></script>
 		<script src="app.js"></script>
+
 		<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/preflight.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="app.css">
 		<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css" rel="stylesheet">
@@ -35,24 +38,6 @@
 	<body>
 
 		<!-- <img width="200" class="TarteletLogo" src="assets/tartelet-records-logo.svg" alt="Tartelet Records"> -->
-		<aside class="Order pt-5 fixed pin-t z-20">
-			<button class="mr-5 float-right js-toggleOrder">X</button>
-			<div class="min-h-screen flex flex-col">
-				<div class="ml-5">
-					<p class="max-w-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui veritatis quasi distinctio error ullam reiciendis doloremque fuga, natus sequi cumque! Quod, repellendus, reiciendis. Numquam enim atque debitis odio dolorum, architecto.</p>
-					<p>
-						<a href="#">Order on Bandcamp</a><br>
-						<a href="#">Order on Something Else</a>
-					</p>
-				</div>
-				<figure class="flex flex-row items-start mt-auto mb-5">
-					<img src="assets/mockups/Max_Album_Back.jpg" alt="">
-					<img src="assets/mockups/Max_Album_Front_01.jpg" alt="">
-					<img src="assets/mockups/Max_Album_Front.jpg" alt="">
-					<img src="assets/mockups/Max_Album_Vinyl.jpg" alt="">
-				</figure>
-			</div>
-		</aside>
 
 		<header class="my-16 mx-8 flex flex-row items-start justify-center text-center">
 			<div>
@@ -63,13 +48,55 @@
 					Lo siento mucho pero<br>no hablo tu idioma
 				</h1>
 			</div>
-			<div class="ml-6 js-toggleOrder">
+			<div class="ml-10 js-toggleOrder">
 				<img src="assets/front.jpg" alt="The album cover" width="240" class="">
 				<a class="OrderButton" href="#">Order album</a>
 			</div>
+			<!-- <a data-fancybox href="#Order">HEY</a> -->
 		</header>
 
-		<div class="VideoGrid flex flex-wrap pt-4 px-4 pb-12"></div>
+		<aside id="Order" class="Order pt-5 fixed pin-t pin-r max-w-md z-30">
+			<button class="mr-5 float-right js-toggleOrder">X</button>
+			<div class="h-screen overflow-scroll flex flex-col">
+				<div class="ml-5">
+					<p class="max-w-md">
+						Four years after his breakthrough, Max Graef returns to Tartelet Records with his second solo album.<br>
+						<br>
+						A dungeon dub symphony in four parts, <em>Lo Siento Mucho Pero No Hablo Tu Idioma</em> is an album's album. Brimming with new and old guests, interludes and bonus skits, it's a consummate sketchbook of Graef's most unique music to date.<br>
+						<br>
+						Where Graef's critically acclaimed debut LP <em>Rivers of the Red Planet</em> began an adventure away from the dance floor, <em>No Hablo</em> wormholes into totally lateral territory. Not interested in repeating old tricks, <em>No Hablo</em> sees Graef on a playful joyride through a whole new crate of influences.  As Graef explains: “No Hablo is a lot more intuitive with a lot less editing, raw arrangements, filled with experiments of strange instrumentation and room.”
+					</p>
+					<p>
+						<strong>2x12' in full colour sleeve with black padded inner sleeves.</strong>
+					</p>
+					<p>
+						<a class="Button" href="#">Order on Bandcamp</a><br>
+						<a class="Button" href="#">Order on Something Else</a>
+					</p>
+				</div>
+				<figure class="Order-gallery flex flex-row flex-wrap items-start mt-auto mb-5">
+					<a data-fancybox="order" data-width="1440" data-height="1020" href="assets/mockups/Max_Album_Front.jpg">
+						<img src="assets/mockups/Max_Album_Front.jpg" alt="">
+					</a>
+					<a data-fancybox="order" data-width="1440" data-height="1020" href="assets/mockups/Max_Album_Front_01.jpg" class="w-1/2">
+						<img src="assets/mockups/Max_Album_Front_01.jpg" alt="">
+					</a>
+					<a data-fancybox="order" data-width="1440" data-height="1020" href="assets/mockups/Max_Album_Back.jpg" class="w-1/2">
+						<img src="assets/mockups/Max_Album_Back.jpg" alt="">
+					</a>
+					<a data-fancybox="order" data-width="1440" data-height="1020" href="assets/mockups/Max_Album_Vinyl.jpg" class="w-1/2">
+						<img src="assets/mockups/Max_Album_Vinyl.jpg" alt="">
+					</a>
+					<a data-fancybox="order" data-width="1440" data-height="1020" href="assets/mockups/Max_Vinyl-C_D.jpg" class="w-1/2">
+						<img src="assets/mockups/Max_Vinyl-C_D.jpg" alt="">
+					</a>
+				</figure>
+			</div>
+		</aside>
+
+		<div class="Overlay fixed pin-t w-full h-full z-20 bg-black"></div>
+
+		<div class="VideoGrid"></div>
 
 		<footer class="text-center px-5">
 			<p>

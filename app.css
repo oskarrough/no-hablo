@@ -1,26 +1,9 @@
-.Order {
-  background: #ced0cd;
-  color: black;
-  transform: translateY(-100%);
-  transition: transform 500ms cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.Order.is-open {
-  transform: translateY(0);
-}
-
-.Order img {
-  width: 25%;
-}
-
-.Order a {
-  color: black;
-}
-
 html {
-  background: black;
+  background: hsl(24, 5%, 10%);
   color: antiquewhite;
-  font-family: system-ui, segoe ui, sans-serif;
+  font-family: 'Gentium Basic', serif, system-ui, segoe ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 input[type='submit'] {
@@ -31,6 +14,25 @@ a {
   color: #f7d85f;
 }
 
+h1,
+h2,
+h3 {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 1rem 0;
+}
+
+h1 {
+  font-smoothing: antialiased;
+  color: antiquewhite;
+}
+
 header {
   text-align: center;
 }
@@ -38,8 +40,11 @@ header {
 header h1 {
   font-size: 4rem;
   font-size: 6vw;
-  line-height: 1;
   animation: rainbow 60s infinite;
+}
+
+header h2 {
+  font-size: 2rem;
 }
 
 @keyframes rainbow {
@@ -60,10 +65,6 @@ header h1 {
   }
 }
 
-header h2 {
-  font-size: 2rem;
-}
-
 .OrderButton {
   display: block;
   font-weight: bold;
@@ -72,72 +73,92 @@ header h2 {
   color: #f19eae;
 }
 
-h1,
-h2,
-h3 {
-  font-size: 1rem;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin: 1rem 0;
-}
-
-h1 {
-  font-smoothing: antialiased;
-  color: antiquewhite;
-}
-
-.Title {
-  transform: rotate(-0.6deg);
-}
-
-article video-placeholder {
-  height: 100%;
-}
-
-*:focus,
-.VideoGrid > *:hover {
-  outline: 3px solid #f7d85f;
-}
-
-.VideoGrid > * {
-  position: relative;
-  width: 100%;
-  border: 0.75rem solid transparent;
-}
-
-.VideoGrid a {
+.Button {
+  background: #f19eae;
+  color: black;
   text-decoration: none;
 }
 
-@media (min-width: 600px) {
-  .VideoGrid > * {
-    flex: 50%;
-  }
+.Button:hover,
+.Button:focus {
+  text-decoration: underline;
+}
 
-  .VideoGrid > :nth-child(3n) {
-    flex: 33.3333%;
+.Order {
+  background: #ced0cd;
+  color: black;
+  transform: translateY(-100%);
+  transition: transform 500ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.Order.is-open {
+  transform: translateY(0);
+}
+
+.Order {
+  font-size: large;
+}
+
+.Order a {
+  color: black;
+}
+
+*:focus,
+.Track:hover {
+  outline: 3px solid #f7d85f;
+}
+
+.Track {
+  position: relative;
+  width: 100%;
+  border: 1rem solid transparent;
+  text-decoration: none;
+}
+
+.Release > h2 {
+  position: absolute;
+  font-size: 50vw;
+  left: -1rem;
+  top: -7rem;
+  opacity: 0.2;
+}
+
+.Release {
+  position: relative;
+  padding: 4rem 5vw;
+}
+
+@media (min-width: 600px) {
+  .Track:nth-child(1) {
+    width: 50%;
+  }
+  .Track:nth-child(2) {
+    width: 50%;
+  }
+  .Track:nth-child(3) {
+    width: 60%;
+  }
+  .Track:nth-child(4) {
+    width: 40%;
+  }
+  .Track:nth-child(5) {
+    width: 40%;
+  }
+  .Track:nth-child(6) {
+    width: 60%;
   }
 }
 
-.VideoGrid img {
+.Track img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   background-position: center;
-  transition: opacity 0.275s cubic-bezier(0.19, 1, 0.22, 1);
-  opacity: 0.75;
+  transition: filter 0.275s cubic-bezier(0.19, 1, 0.22, 1);
+  /*opacity: 0.75;*/
 }
 
-.VideoGrid > *:hover img {
-  opacity: 1;
-  filter: brightness(130%);
-}
-
-.VideoGrid h2 {
+.Track h2 {
   position: absolute;
   left: 0rem;
   bottom: 1rem;
@@ -149,7 +170,12 @@ article video-placeholder {
   letter-spacing: 0.05em;
 }
 
-.VideoGrid > *:hover h2 {
+.Track:hover img {
+  opacity: 1;
+  filter: brightness(150%);
+}
+
+.Track:hover h2 {
   background: black;
   color: #f7d85f;
 }
@@ -172,12 +198,12 @@ article video-placeholder {
   transition: transform 0.275s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.VideoGrid > *:hover .PlayButton circle {
+.Track:hover .PlayButton circle {
   transform: scale(1);
 }
 
-.VideoGrid > *:hover .PlayButton,
-.VideoGrid > *:focus .PlayButton {
+.Track:hover .PlayButton,
+.Track:focus .PlayButton {
   opacity: 1;
   background-image: radial-gradient(hsla(0, 0%, 0%, 0.4) 8%, transparent 50%);
 }
@@ -210,4 +236,27 @@ article video-placeholder {
 
 footer svg {
   max-width: 2rem;
+  margin: 0 0.25em;
+  filter: saturate(0%);
+}
+
+.fancybox-slide .w-1/2 {
+  width: inherit;
+}
+
+body.is-fadedOut header,
+body.is-fadedOut .VideoGrid {
+  /*opacity: 0.5;*/
+}
+
+.Overlay {
+  visibility: hidden;
+  transition: opacity 100ms, visibility 0ms 200ms;
+  opacity: 0;
+}
+
+.is-fadedOut .Overlay {
+  visibility: visible;
+  transition: opacity 100ms, visibility 0ms;
+  opacity: 0.75;
 }
