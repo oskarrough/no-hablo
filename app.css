@@ -254,3 +254,8 @@ body.is-fadedOut .VideoGrid {
   transition: opacity 100ms, visibility 0ms;
   opacity: 0.75;
 }
+
+.fancybox-caption {
+  font-family: 'Gentium Basic', serif, system-ui, segoe ui, sans-serif;
+}
+
