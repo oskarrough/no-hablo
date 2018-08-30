@@ -1,5 +1,5 @@
 html {
-  background: hsl(24, 5%, 10%);
+  background: hsl(24, 5%, 1%);
   color: antiquewhite;
   font-family: 'Gentium Basic', serif, system-ui, segoe ui, sans-serif;
   font-size: 18px;
@@ -70,7 +70,8 @@ header h2 {
   font-weight: bold;
   text-decoration: none;
   padding: 0.5em 0 0;
-  color: #f19eae;
+  /* color: #f19eae; */
+	color: antiquewhite;
 }
 
 .Button {
@@ -85,6 +86,7 @@ header h2 {
 }
 
 .Order {
+	width: 80%;
   background: #ced0cd;
   color: black;
   transform: translateY(-100%);
@@ -125,7 +127,7 @@ header h2 {
 
 .Release {
   position: relative;
-  padding: 4rem 5vw;
+  padding: 1rem 5vw;
 }
 
 @media (min-width: 600px) {
