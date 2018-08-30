@@ -117,14 +117,6 @@ header h2 {
   text-decoration: none;
 }
 
-.Release > h2 {
-  position: absolute;
-  font-size: 50vw;
-  left: -1rem;
-  top: -7rem;
-  opacity: 0.2;
-}
-
 .Release {
   position: relative;
   padding: 1rem 5vw;

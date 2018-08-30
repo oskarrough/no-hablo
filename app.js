@@ -18,10 +18,7 @@ class VideoGrid extends Component {
 			${this.state.releases.map(
         (release, index) => `
 				<div class="Release">
-					<h2 class="">
-						${release[0].trackNumber.charAt(0)}
-					</h2>
-<div class="flex flex-wrap">
+					<div class="flex flex-wrap">
 				${release
           .map(
             track => `
