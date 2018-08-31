@@ -9,7 +9,7 @@
 	let duration
 
 	// Create WebSocket connection and save start time.
-	const socket = new WebSocket('ws://no-hablo-server-sfihkrivdi.now.sh')
+	const socket = new WebSocket('wss://no-hablo-server-sfihkrivdi.now.sh')
 
 	socket.addEventListener('message', function (event) {
 		elapsedTime = Number(event.data)
