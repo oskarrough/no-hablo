@@ -70,9 +70,11 @@ header h2 {
 }
 
 .Button {
-  background: #f19eae;
+  /*background: #f19eae;*/
   color: black;
-  text-decoration: none;
+  font-weight: bold;
+  font-size: x-large;
+  /*text-decoration: none;*/
 }
 
 .Button:hover,
