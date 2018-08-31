@@ -65,13 +65,8 @@ header h2 {
   }
 }
 
-.OrderButton {
-  display: block;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 0.5em 0 0;
-  /* color: #f19eae; */
-	color: antiquewhite;
+.color-antiquewhite {
+  color: antiquewhite;
 }
 
 .Button {
@@ -86,22 +81,7 @@ header h2 {
 }
 
 .Order {
-	width: 40rem;
   background: #ced0cd;
-  color: black;
-  transform: translateY(-100%);
-  transition: transform 500ms cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.Order.is-open {
-  transform: translateY(0);
-}
-
-.Order {
-  font-size: large;
-}
-
-.Order a {
   color: black;
 }
 
@@ -117,8 +97,7 @@ header h2 {
   text-decoration: none;
 }
 
-.Release {
-  position: relative;
+.Container {
   padding: 1rem 5vw;
 }
 
@@ -228,14 +207,10 @@ header h2 {
   visibility: hidden;
 }
 
-footer svg {
+.Icon {
   max-width: 2rem;
-  margin: 0 0.25em;
+  margin-right: 0.5em;
   filter: saturate(0%);
-}
-
-.fancybox-slide .w-1/2 {
-  width: inherit;
 }
 
 body.is-fadedOut header,

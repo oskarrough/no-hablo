@@ -17,7 +17,7 @@ class VideoGrid extends Component {
     return this.html`
 			${this.state.releases.map(
         (release, index) => `
-				<div class="Release">
+				<div class="Container">
 					<div class="flex flex-wrap">
 				${release
           .map(
@@ -49,11 +49,6 @@ class VideoGrid extends Component {
 function init() {
   hyper(document.querySelector('.VideoGrid'))`${new VideoGrid()}`
 
-  $('.Order-gallery > a').fancybox({
-    type: 'image',
-    hash: false,
-    buttons: ['zoom', 'close']
-  })
 
   $('.VideoGrid [data-fancybox]').fancybox({
     animationDuration: 200,
@@ -74,26 +69,10 @@ function init() {
     }
   })
 
-  var $overlay = $('.Order')
-  var $overlayButtons = $('.js-toggleOrder')
-
-  function toggleOverlay() {
-    $overlay.toggleClass('is-open')
-    $('body').toggleClass('is-fadedOut')
-  }
-
-  function closeOverlay() {
-    $overlay.removeClass('is-open')
-    $('body').removeClass('is-fadedOut')
-  }
-
-  $overlayButtons.on('click', toggleOverlay)
-  $('.Overlay').on('click', closeOverlay)
-
-  $('body').keydown(event => {
-    if (event.key === 'Escape' && $overlay.hasClass('is-open')) {
-      closeOverlay()
-    }
+  $('.Order-gallery > a').fancybox({
+    type: 'image',
+    hash: false,
+    buttons: ['zoom', 'close']
   })
 }
 
