@@ -1,0 +1,35 @@
+<audio controls>
+	<source src="assets/b.ogg" type="audio/ogg">
+		Your browser does not support the audio element.
+</audio>
+
+<script>
+	const audio = document.querySelector('audio')
+	let elapsedTime
+	let duration
+
+	// Create WebSocket connection and save start time.
+	const socket = new WebSocket('ws://no-hablo-server-sfihkrivdi.now.sh')
+
+	socket.addEventListener('message', function (event) {
+		elapsedTime = Number(event.data)
+		console.log({elapsedTime})
+		startSynced()
+	})
+
+	audio.addEventListener('durationchange', event => {
+		duration = event.target
+		console.log({duration})
+		startSynced()
+	})
+
+	function startSynced() {
+	// We need both of these but both are async.
+		if (elapsedTime && (duration || audio.duration)) {
+			const startTime = elapsedTime % audio.duration
+			console.log({startTime})
+			audio.currentTime = startTime
+			audio.play()
+		}
+	}
+</script>
