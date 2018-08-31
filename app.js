@@ -1,33 +1,31 @@
-// import data from './data.js'
-// console.log({data})
+/* global $, data */
 
 const {hyper, Component} = hyperHTML
-// const {bind: hyper, wire} = hyperHTML
 
 class VideoGrid extends Component {
-  get defaultState() {
-    return {
-      tracks: data.tracks,
-      releases: data.releases
-    }
-  }
-  render() {
-    var fallback = 'https://media.giphy.com/media/X6kSlteTQtIdWeYO6Y/giphy.gif'
-
-    return this.html`
+	get defaultState() {
+		return {
+			releases: data.releases
+		}
+	}
+	render() {
+		return this.html`
 			${this.state.releases.map(
-        (release, index) => `
+				(release, index) => `
 				<div class="Container">
 					<div class="flex flex-wrap">
 				${release
-          .map(
-            track => `
+					.map(
+						track => `
 					<a class="Track" href="https://www.youtube.com/watch?v=${
-            track.youtubeId
-          }&amp;autoplay=1&amp;rel=0&amp;controls=1&amp;showinfo=0" data-fancybox="gallery" data-caption="${
-              track.trackNumber
-            } ${track.title}">
-						<img src="${track.gif ? track.gif : fallback}" alt="${track.title}">
+						track.youtubeId
+					}&amp;autoplay=1&amp;rel=0&amp;controls=1&amp;showinfo=0" data-fancybox="gallery" data-caption="${
+							track.trackNumber
+						} ${track.title}">
+
+						<!-- <img class="lazyload" data-src="${track.gif}" alt=""> -->
+						<video muted autoplay loop src="${track.video}"></video>
+
 						<h2 class="font-normal">
 							<span class="opacity-50">${track.trackNumber}</span> ${track.title}
 						</h2>
@@ -37,43 +35,38 @@ class VideoGrid extends Component {
 						</svg>
 					</a>
 				`
-          )
-          .join('')}</div>
+					)
+					.join('')}</div>
 				</div>
 			`
-      )}
+			)}
 		`
-  }
+	}
 }
 
 function init() {
-  hyper(document.querySelector('.VideoGrid'))`${new VideoGrid()}`
+	hyper(document.querySelector('.VideoGrid'))`${new VideoGrid()}`
 
+	$('.VideoGrid [data-fancybox]').fancybox({
+		animationDuration: 200,
+		hash: false,
+		buttons: [
+			'close'
+		],
+		infobar: false,
+		caption: function(instance, item) {
+			var caption = this.querySelector('h2').outerHTML
+			var count = '<span data-fancybox-index></span> of <span data-fancybox-count></span>'
+			return count + caption
+		}
+	})
 
-  $('.VideoGrid [data-fancybox]').fancybox({
+	$('.Order-gallery > a').fancybox({
     animationDuration: 200,
-    hash: 'video',
-    buttons: [
-      // "zoom",
-      // "share",
-      // "fullScreen",
-      // "download",
-      // "thumbs",
-      'close'
-    ],
-    infobar: false,
-    caption: function(instance, item) {
-      var caption = this.querySelector('h2').outerHTML
-      var count = '<span data-fancybox-index></span> of <span data-fancybox-count></span>'
-      return count + caption
-    }
-  })
-
-  $('.Order-gallery > a').fancybox({
-    type: 'image',
-    hash: false,
-    buttons: ['zoom', 'close']
-  })
+		type: 'image',
+		hash: false,
+		buttons: ['zoom', 'close']
+	})
 }
 
 document.addEventListener('DOMContentLoaded', init)
