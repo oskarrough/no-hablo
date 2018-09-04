@@ -67,6 +67,13 @@ function init() {
 		hash: false,
 		buttons: ['zoom', 'close']
 	})
+
+  $('.js-scroll').on('click', function(event) {
+    event.preventDefault()
+    document.querySelector($(this).attr('href')).scrollIntoView({
+      behavior: 'smooth'
+    })
+  })
 }
 
 document.addEventListener('DOMContentLoaded', init)
