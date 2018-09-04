@@ -224,6 +224,13 @@ header h2 {
   filter: saturate(0%);
 }
 
+.SoundCloudIcon {
+	height: 2.5em;
+	position: relative;
+	top: 0.4rem;
+	margin-right: 1rem;
+}
+
 body.is-fadedOut header,
 body.is-fadedOut .VideoGrid {
   /*opacity: 0.5;*/
