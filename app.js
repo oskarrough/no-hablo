@@ -24,7 +24,7 @@ class VideoGrid extends Component {
 						} ${track.title}">
 
 						<!-- <img class="lazyload" data-src="${track.gif}" alt=""> -->
-						<video muted autoplay loop class="lazyload" data-src="${track.video}"></video>
+						<video muted autoplay loop class="lazyload" src="${track.video}"></video>
 
 						<h2 class="font-normal">
 							<span class="opacity-50">${track.trackNumber}</span> ${track.title}
