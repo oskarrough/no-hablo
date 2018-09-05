@@ -36,9 +36,10 @@ function TrackTemplate(track) {
 
 	return wire(track)`
 		<a class="Track" href="${href}" data-fancybox="gallery">
-			<video muted autoplay loop class="lazyload" src="${giphy.video}" placeholder="${
-		thumb.maxres
-	}"></video>
+			${track.giphyId ?
+				wire()`<video muted autoplay loop class="lazyload" src="${giphy.video}"></video>` :
+				wire()`<img src="${thumb.maxres}" alt="${track.title}">`
+			}
 			<h2>
 				<span class="opacity-50">${track.trackNumber}</span> ${track.title}
 			</h2>
