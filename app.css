@@ -1,227 +1,226 @@
 html,
 .fancybox-caption {
-  font-family: 'minion-3', serif;
+	font-family: 'minion-3', serif;
 }
 
 html {
-  font-size: 18px;
-  line-height: 1.5;
-  background: hsl(24, 5%, 1%);
-  color: antiquewhite;
+	font-size: 18px;
+	line-height: 1.5;
+	background: hsl(24, 5%, 1%);
+	color: antiquewhite;
 }
 
 a {
-  color: #f7d85f;
+	color: #f7d85f;
 }
 
 h1,
 h2,
 h3 {
-  font-size: 1rem;
-  line-height: 1;
+	font-size: 1rem;
+	line-height: 1;
 }
 
 h1,
 h2,
 h3,
 p {
-  margin: 1rem 0;
+	margin: 1rem 0;
 }
 
 h1 {
-  font-smoothing: antialiased;
-  color: antiquewhite;
+	font-smoothing: antialiased;
+	color: antiquewhite;
 }
 
 input[type='submit'] {
-  background-color: antiquewhite;
+	background-color: antiquewhite;
 }
 
 header {
-  text-align: center;
+	text-align: center;
 }
 
 header h1 {
-  font-size: 4rem;
-  font-size: 5vw;
-  animation: rainbow 50s infinite;
+	font-size: 4rem;
+	font-size: 5vw;
+	animation: rainbow 50s infinite;
 }
 
 header h2 {
-  font-size: 2rem;
+	font-size: 2rem;
 }
 
 @keyframes rainbow {
-  0% {
-    color: antiquewhite;
-  }
-  20% {
-    color: #81b45b;
-  }
-  40% {
-    color: #f3b8b0;
-  }
-  60% {
-    color: #41993c;
-  }
-  80% {
-    color: #ea8611;
-  }
+	0% {
+		color: antiquewhite;
+	}
+	20% {
+		color: #81b45b;
+	}
+	40% {
+		color: #f3b8b0;
+	}
+	60% {
+		color: #41993c;
+	}
+	80% {
+		color: #ea8611;
+	}
 }
 
 .Container {
-  padding-left: 5vw;
-  padding-right: 5vw;
+	padding-left: 5vw;
+	padding-right: 5vw;
 }
 
 .color-antiquewhite {
-  color: antiquewhite;
+	color: antiquewhite;
 }
 
 .Button {
-  color: black;
-  font-weight: bold;
-  font-size: x-large;
+	color: black;
+	font-weight: bold;
+	font-size: x-large;
 }
 
 .Button:hover,
 .Button:focus {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 .Order {
-  background: #ced0cd;
-  color: black;
+	background: #ced0cd;
+	color: black;
 }
 
 *:focus:not(.js-scroll),
 .Track:hover {
-  outline: 3px solid #f7d85f;
+	outline: 3px solid #f7d85f;
 }
 
 .Track {
-  position: relative;
-  width: 100%;
-  border: 1rem solid transparent;
-  text-decoration: none;
-  overflow: hidden;
+	position: relative;
+	width: 100%;
+	border: 1rem solid transparent;
+	text-decoration: none;
+	overflow: hidden;
 }
 
 @media (min-width: 600px) {
-  .Track:nth-child(1) {
-    width: 50%;
-  }
-  .Track:nth-child(2) {
-    width: 50%;
-  }
-  .Track:nth-child(3) {
-    width: 60%;
-  }
-  .Track:nth-child(4) {
-    width: 40%;
-  }
-  .Track:nth-child(5) {
-    width: 40%;
-  }
-  .Track:nth-child(6) {
-    width: 60%;
-  }
+	.Track:nth-child(1) {
+		width: 50%;
+	}
+	.Track:nth-child(2) {
+		width: 50%;
+	}
+	.Track:nth-child(3) {
+		width: 60%;
+	}
+	.Track:nth-child(4) {
+		width: 40%;
+	}
+	.Track:nth-child(5) {
+		width: 40%;
+	}
+	.Track:nth-child(6) {
+		width: 60%;
+	}
 }
 
 .Track img,
 .Track video {
-  max-width: 100%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  background-position: center;
-  /*transition: filter 0.275s cubic-bezier(0.19, 1, 0.22, 1);*/
-  /*opacity: 0.5;*/
+	max-width: 100%;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	background-position: center;
+	/*transition: filter 0.275s cubic-bezier(0.19, 1, 0.22, 1);*/
+	/*opacity: 0.5;*/
 }
 
 .Track h2 {
-  position: absolute;
-  left: 0rem;
-  bottom: 1rem;
-  z-index: 1;
-  margin: 0;
-  padding: 1em;
-  color: antiquewhite;
-  font-weight: normal;
-  letter-spacing: 0.05em;
+	position: absolute;
+	left: 0rem;
+	bottom: 1rem;
+	z-index: 1;
+	margin: 0;
+	padding: 1em;
+	color: antiquewhite;
+	font-weight: normal;
+	letter-spacing: 0.05em;
 }
 
 .Track:hover img,
 .Track:hover video {
-  opacity: 1;
-  filter: brightness(150%);
+	opacity: 1;
+	filter: brightness(150%);
 }
 
 .Track:hover h2 {
-  background: black;
-  color: #f7d85f;
+	background: black;
+	color: #f7d85f;
 }
 
 /* Play button on videos */
 .PlayButton {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 1em calc(50% - 40px);
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 200ms;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 1em calc(50% - 40px);
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 200ms;
 }
 
 .PlayButton circle {
-  transform: scale(0.97);
-  transform-origin: center;
-  transition: transform 0.275s cubic-bezier(0.19, 1, 0.22, 1);
+	transform: scale(0.97);
+	transform-origin: center;
+	transition: transform 0.275s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .Track:hover .PlayButton circle {
-  transform: scale(1);
+	transform: scale(1);
 }
 
 .Track:hover .PlayButton,
 .Track:focus .PlayButton {
-  opacity: 1;
-  background-image: radial-gradient(hsla(0, 0%, 0%, 0.4) 8%, transparent 50%);
+	opacity: 1;
+	background-image: radial-gradient(hsla(0, 0%, 0%, 0.4) 8%, transparent 50%);
 }
 
 .fancybox-caption {
-  font-size: 1rem;
-  line-height: inherit;
-  padding: 1rem 1rem 1rem 2vw;
-  top: 0;
-  bottom: auto;
-  right: auto;
-  background: black;
+	font-size: 1rem;
+	line-height: inherit;
+	padding: 1rem 1rem 1rem 2vw;
+	top: 0;
+	bottom: auto;
+	right: auto;
+	background: black;
 }
 
 .fancybox-caption h2 {
-  margin: 0.2em 0 0;
-  color: #f7d85f;
+	margin: 0.2em 0 0;
+	color: #f7d85f;
 }
 
 .fancybox-caption::before,
 .fancybox-caption::after {
-  /* hide border */
-  display: none;
+	/* hide border */
+	display: none;
 }
 
 .fancybox-active .VideoGrid img,
 .fancybox-active .VideoGrid video {
-  /* hide media while in fullscreen mode for performance */
-  visibility: hidden;
+	/* hide media while in fullscreen mode for performance */
+	visibility: hidden;
 }
 
 .Icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: 0.5em;
-  filter: saturate(0%);
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-right: 0.75em;
 }
 
 .SoundCloudIcon {
