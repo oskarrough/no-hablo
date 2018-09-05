@@ -103,12 +103,24 @@ data.releases = [
 		},
 		{
 			trackNumber: 'C6',
-			title: 'Midi Break 2',
+			title: 'Midi Break 2 (Part 1)',
 			youtubeId: 'Xd4ZLweqMx4',
-			giphyId: '57SRy3NTEYvAhwWxU7' // part1
-			// https://www.youtube.com/watch?v=j8fgDCuGnsU // part2
-			// https://www.youtube.com/watch?v=SrRfGl5ZyWk // part3
-			// https://www.youtube.com/watch?v=lDcBYgOP7Cg // part4
+			giphyId: '57SRy3NTEYvAhwWxU7'
+		},
+		{
+			trackNumber: 'C6',
+			title: 'Midi Break 2 (Part 2)',
+			youtubeId: 'j8fgDCuGnsU'
+		},
+		{
+			trackNumber: 'C6',
+			title: 'Midi Break 2 (Part 3)',
+			youtubeId: 'SrRfGl5ZyWk',
+		},
+		{
+			trackNumber: 'C6',
+			title: 'Midi Break 2 (Part 4)',
+			youtubeId: 'lDcBYgOP7Cg'
 		}
 	],
 	[

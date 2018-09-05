@@ -126,6 +126,11 @@ header h2 {
 	.Track:nth-child(6) {
 		width: 60%;
 	}
+	.Track:nth-child(7),
+	.Track:nth-child(8),
+	.Track:nth-child(9) {
+		width: 33.3333%;
+	}
 }
 
 .Track img,
