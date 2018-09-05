@@ -36,9 +36,10 @@ function TrackTemplate(track) {
 
 	return wire(track)`
 		<a class="Track" href="${href}" data-fancybox="gallery">
-			${track.giphyId ?
-				wire()`<video muted autoplay loop class="lazyload" src="${giphy.video}"></video>` :
-				wire()`<img src="${thumb.maxres}" alt="${track.title}">`
+			${
+				track.giphyId
+					? wire()`<video muted autoplay loop class="lazyload" src="${giphy.video}"></video>`
+					: wire()`<img src="${thumb.maxres}" alt="${track.title}">`
 			}
 			<h2>
 				<span class="opacity-50">${track.trackNumber}</span> ${track.title}
@@ -64,6 +65,11 @@ function init() {
 			var caption = this.querySelector('h2').outerHTML
 			var count = '<span data-fancybox-index></span> of <span data-fancybox-count></span>'
 			return count + caption
+		},
+		i18n: {
+			en: {
+				ERROR: 'COMING SOON'
+			}
 		}
 	})
 
