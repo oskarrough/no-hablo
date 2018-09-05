@@ -44,7 +44,7 @@ header {
 header h1 {
   font-size: 4rem;
   font-size: 5vw;
-  animation: rainbow 60s infinite;
+  animation: rainbow 50s infinite;
 }
 
 header h2 {
@@ -94,7 +94,7 @@ header h2 {
   color: black;
 }
 
-*:focus,
+*:focus:not(.js-scroll),
 .Track:hover {
   outline: 3px solid #f7d85f;
 }
@@ -211,8 +211,9 @@ header h2 {
   display: none;
 }
 
-.fancybox-active .VideoGrid img {
-  /* hide gifs while in fullscreen mode for performance */
+.fancybox-active .VideoGrid img,
+.fancybox-active .VideoGrid video {
+  /* hide media while in fullscreen mode for performance */
   visibility: hidden;
 }
 
@@ -227,23 +228,4 @@ header h2 {
 	height: 2.5em;
 	position: relative;
 	top: 0.4rem;
-	margin-right: 1rem;
 }
-
-body.is-fadedOut header,
-body.is-fadedOut .VideoGrid {
-  /*opacity: 0.5;*/
-}
-
-.Overlay {
-  visibility: hidden;
-  transition: opacity 100ms, visibility 0ms 200ms;
-  opacity: 0;
-}
-
-.is-fadedOut .Overlay {
-  visibility: visible;
-  transition: opacity 100ms, visibility 0ms;
-  opacity: 0.75;
-}
-
