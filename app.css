@@ -69,16 +69,19 @@ header h2 {
   }
 }
 
+.Container {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
 .color-antiquewhite {
   color: antiquewhite;
 }
 
 .Button {
-  /*background: #f19eae;*/
   color: black;
   font-weight: bold;
   font-size: x-large;
-  /*text-decoration: none;*/
 }
 
 .Button:hover,
@@ -102,10 +105,6 @@ header h2 {
   border: 1rem solid transparent;
   text-decoration: none;
   overflow: hidden;
-}
-
-.Container {
-  padding: 1rem 5vw;
 }
 
 @media (min-width: 600px) {
