@@ -17,9 +17,9 @@ function ReleaseTemplate(release) {
 }
 
 function TrackTemplate(track) {
-	const href = `https://www.youtube.com/watch?v=${
+	const youtubeLink = `https://www.youtube.com/watch?v=${
 		track.youtubeId
-	}&autoplay=1&rel=0&controls=1&showinfo=0&list=PLGXSVM0qM_LqHgm0N99p4g9z1G6GCEu2z"`
+	}&autoplay=1&rel=0&controls=1&list=PLGXSVM0qM_LqHgm0N99p4g9z1G6GCEu2z`
 
 	const thumb = {
 		hq: `http://img.youtube.com/vi/${track.youtubeId}/hqdefault.jpg`,
@@ -46,7 +46,7 @@ function TrackTemplate(track) {
 	}
 
 	return wire(track)`
-		<a class="Track" href="${href}" data-fancybox="gallery">
+		<a class="Track" href="${youtubeLink}" data-fancybox="gallery">
 			${
 				track.giphyId
 					? wire()`<video muted autoplay loop class="lazyload" src="${giphy.video}"></video>`
