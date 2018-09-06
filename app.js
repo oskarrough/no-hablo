@@ -49,7 +49,7 @@ function TrackTemplate(track) {
 		<a class="Track" href="${youtubeLink}" data-fancybox="gallery">
 			${
 				track.giphyId
-					? wire()`<video muted autoplay loop class="lazyload" src="${giphy.video}"></video>`
+					? wire()`<video playsinline muted autoplay loop class="lazyload" data-src="${giphy.video}"></video>`
 					: wire()`<img src="${thumb.maxres}" alt="${track.title}">`
 			}
 			<h2>
@@ -65,7 +65,13 @@ function TrackTemplate(track) {
 function init() {
 	// Template with video grid. Also see data.js file.
 	// hyper(document.querySelector('.VideoGrid'))`${new List(data.releases)}`
-	hyper(document.querySelector('.VideoGrid'))`${new ReleaseTemplate(realTracks)}`
+	const gridContainer = document.querySelector('.VideoGrid')
+	hyper(gridContainer)`${new ReleaseTemplate(realTracks)}`
+
+	// Firefox doesn't mute videos when they are added dynamically (via js), so…
+	for (let video of gridContainer.querySelectorAll('video')) {
+		video.muted = true
+	}
 
 	// Video gallery.
 	$('.VideoGrid [data-fancybox]').fancybox({
