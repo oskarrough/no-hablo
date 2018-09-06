@@ -13,9 +13,7 @@ data.releases = [
 		},
 		{
 			trackNumber: 'A2',
-			title: 'Level Zero',
-			youtubeId: '',
-			giphyId: ''
+			title: 'Level Zero'
 		},
 		{
 			trackNumber: 'A3',
@@ -46,9 +44,7 @@ data.releases = [
 		},
 		{
 			trackNumber: 'B3',
-			title: 'Srrr',
-			youtubeId: '',
-			giphyId: ''
+			title: 'Srrr'
 		},
 		{
 			trackNumber: 'B4',
@@ -59,8 +55,7 @@ data.releases = [
 		{
 			trackNumber: 'B5',
 			title: 'Funk',
-			youtubeId: '',
-			giphyId: ''
+			youtubeId: 'Lg2j2wBh0Aw'
 		},
 		{
 			trackNumber: 'B6',
@@ -73,14 +68,11 @@ data.releases = [
 		{
 			trackNumber: 'C1',
 			title: 'Y',
-			youtubeId: 'bA0yHM7sW7o',
-			giphyId: ''
+			youtubeId: 'bA0yHM7sW7o'
 		},
 		{
 			trackNumber: 'C2',
-			title: 'Arcadia',
-			youtubeId: '',
-			giphyId: ''
+			title: 'Arcadia'
 		},
 		{
 			trackNumber: 'C3',
@@ -103,23 +95,23 @@ data.releases = [
 		},
 		{
 			trackNumber: 'C6',
-			title: 'Midi Break 2 (Part 1)',
+			title: 'Break 1',
 			youtubeId: 'Xd4ZLweqMx4',
 			giphyId: '57SRy3NTEYvAhwWxU7'
 		},
 		{
 			trackNumber: 'C6',
-			title: 'Midi Break 2 (Part 2)',
+			title: 'Break 2',
 			youtubeId: 'j8fgDCuGnsU'
 		},
 		{
 			trackNumber: 'C6',
-			title: 'Midi Break 2 (Part 3)',
+			title: 'Break 3',
 			youtubeId: 'SrRfGl5ZyWk',
 		},
 		{
 			trackNumber: 'C6',
-			title: 'Midi Break 2 (Part 4)',
+			title: 'Break 4',
 			youtubeId: 'lDcBYgOP7Cg'
 		}
 	],
@@ -127,8 +119,8 @@ data.releases = [
 		{
 			trackNumber: 'D1',
 			title: 'Shrimp',
-			youtubeId: '',
-			giphyId: ''
+			youtubeId: 'k4BQ5wkP824',
+			giphyId: '46iZkJWhowPU2H4KyR'
 		},
 		{
 			trackNumber: 'D2',
