@@ -2,11 +2,10 @@
 
 const {hyper, wire} = hyperHTML
 
+const tracks = [].concat(...data.releases)
+
 function List(items) {
-	return wire(items)`
-		<div class="Container">
-			${items.map(ReleaseTemplate)}
-		</div>`
+	return wire(items)`${items.map(ReleaseTemplate)}`
 }
 
 function ReleaseTemplate(release) {
