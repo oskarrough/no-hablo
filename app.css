@@ -228,3 +228,10 @@ header h2 {
 	position: relative;
 	top: 0.4rem;
 }
+
+.Credits {
+}
+
+.Credits:hover {
+	opacity: 1;
+}
