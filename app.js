@@ -2,11 +2,11 @@
 
 const {hyper, wire} = hyperHTML
 
+const tracks = [].concat(...data.releases)
+const realTracks = tracks.filter(track => track.youtubeId)
+
 function List(items) {
-	return wire(items)`
-		<div class="Container">
-			${items.map(ReleaseTemplate)}
-		</div>`
+	return wire(items)`${items.map(ReleaseTemplate)}`
 }
 
 function ReleaseTemplate(release) {
@@ -64,7 +64,8 @@ function TrackTemplate(track) {
 
 function init() {
 	// Template with video grid. Also see data.js file.
-	hyper(document.querySelector('.VideoGrid'))`${new List(data.releases)}`
+	// hyper(document.querySelector('.VideoGrid'))`${new List(data.releases)}`
+	hyper(document.querySelector('.VideoGrid'))`${new ReleaseTemplate(realTracks)}`
 
 	// Video gallery.
 	$('.VideoGrid [data-fancybox]').fancybox({
