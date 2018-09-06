@@ -34,6 +34,17 @@ function TrackTemplate(track) {
 		video: `https://media.giphy.com/media/${track.giphyId}/giphy.mp4`
 	}
 
+	// Fallback for tracks without video.
+	if (!track.youtubeId) {
+		return wire(track)`
+			<div class="Track">
+				<h2>
+					<span class="opacity-50">${track.trackNumber}</span> ${track.title}
+				</h2>
+			</div>
+		`
+	}
+
 	return wire(track)`
 		<a class="Track" href="${href}" data-fancybox="gallery">
 			${
