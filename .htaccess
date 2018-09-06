@@ -1,7 +1,13 @@
-# Disablie varnish because it makes updates impossible
+# Disable varnish on one.com hosting (because it makes updates impossible)
 Header add "disablevcache" "true"
 
-# Redirect to www with https
 RewriteEngine On
+
+# Ensure www.
 RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Ensure https
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
