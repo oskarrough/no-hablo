@@ -33,8 +33,10 @@ h1 {
 	color: antiquewhite;
 }
 
-input[type='submit'] {
-	background-color: antiquewhite;
+input[type='email'] {
+	border: 1px solid antiquewhite;
+	background: transparent;
+	color: antiquewhite;
 }
 
 header {
