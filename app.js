@@ -50,7 +50,7 @@ function TrackTemplate(track) {
 			${
 				track.giphyId
 					? wire()`<video playsinline muted autoplay loop class="lazyload" data-src="${giphy.video}"></video>`
-					: wire()`<img src="${thumb.maxres}" alt="${track.title}">`
+					: wire()`<img class="lazyload" data-src="${thumb.maxres}" alt="${track.title}">`
 			}
 			<h2>
 				<span class="opacity-50">${track.trackNumber}</span> ${track.title}
