@@ -72,8 +72,15 @@ header h2 {
 }
 
 .Container {
-	padding-left: 5vw;
-	padding-right: 5vw;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+@media (min-width: 600px) {
+	.Container {
+		padding-left: 5vw;
+		padding-right: 5vw;
+	}
 }
 
 .color-antiquewhite {
@@ -104,12 +111,17 @@ header h2 {
 .Track {
 	position: relative;
 	width: 100%;
-	border: 1rem solid transparent;
+	border-style: solid;
+	border-color: transparent;
+	border-width: 0.5em 1em;
 	text-decoration: none;
 	overflow: hidden;
 }
 
 @media (min-width: 600px) {
+	.Track {
+		border-width: 1em;
+	}
 	.Track:nth-child(1) {
 		width: 50%;
 	}
