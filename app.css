@@ -103,7 +103,7 @@ header h2 {
 	color: black;
 }
 
-*:focus:not(.js-scroll),
+*:focus:not(.no-focus),
 .Track:not(.no-focus):hover {
 	outline: 3px solid #f7d85f;
 }
