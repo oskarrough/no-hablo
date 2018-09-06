@@ -104,7 +104,7 @@ header h2 {
 }
 
 *:focus:not(.js-scroll),
-.Track:hover {
+.Track:not(.no-focus):hover {
 	outline: 3px solid #f7d85f;
 }
 

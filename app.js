@@ -37,7 +37,7 @@ function TrackTemplate(track) {
 	// Fallback for tracks without video.
 	if (!track.youtubeId) {
 		return wire(track)`
-			<div class="Track">
+			<div class="Track no-focus">
 				<h2>
 					<span class="opacity-50">${track.trackNumber}</span> ${track.title}
 				</h2>
