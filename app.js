@@ -44,7 +44,7 @@ function TrackTemplate(track) {
 	}
 
 	return wire(track)`
-		<a class="Track" href="${youtubeLink}" data-fancybox="gallery">
+		<a class="Track Ratio" href="${youtubeLink}" data-fancybox="gallery">
 			${
 				track.giphyId
 					? wire()`<video playsinline muted autoplay loop class="lazyload" data-src="${

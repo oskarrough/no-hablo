@@ -108,13 +108,29 @@ header h2 {
 }
 
 .Track {
-	position: relative;
 	width: 100%;
 	border-style: solid;
 	border-color: transparent;
 	border-width: 0.5em 1em;
 	text-decoration: none;
 	overflow: hidden;
+}
+
+.Ratio {
+	position: relative;
+}
+
+.Ratio > * {
+	position: absolute;
+}
+
+.Ratio::after {
+	content: '';
+	display: block;
+	height: 0;
+	width: 100%;
+	padding-bottom: 56.25%;
+	/* padding-bottom: calc(9 / 16 * 100%); */
 }
 
 @media (min-width: 600px) {
@@ -129,17 +145,16 @@ header h2 {
 
 .Track img,
 .Track video {
-	max-width: 100%;
+	display: block;
 	width: 100%;
 	height: 100%;
+	max-width: 100%;
 	object-fit: cover;
 	background-position: center;
 	/*transition: filter 0.275s cubic-bezier(0.19, 1, 0.22, 1);*/
-	/*opacity: 0.5;*/
 }
 
 .Track h2 {
-	position: absolute;
 	left: 0rem;
 	bottom: 1rem;
 	z-index: 1;
@@ -163,7 +178,6 @@ header h2 {
 
 /* Play button on videos */
 .PlayButton {
-	position: absolute;
 	top: 0;
 	left: 0;
 	padding: 1em calc(50% - 40px);
