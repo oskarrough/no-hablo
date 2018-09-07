@@ -38,9 +38,7 @@ function TrackTemplate(track) {
 	if (!track.youtubeId) {
 		return wire(track)`
 			<div class="Track no-focus">
-				<h2>
-					<span class="opacity-50">${track.trackNumber}</span> ${track.title}
-				</h2>
+				<h2>${track.title}</h2>
 			</div>
 		`
 	}
@@ -49,12 +47,12 @@ function TrackTemplate(track) {
 		<a class="Track" href="${youtubeLink}" data-fancybox="gallery">
 			${
 				track.giphyId
-					? wire()`<video playsinline muted autoplay loop class="lazyload" data-src="${giphy.video}"></video>`
+					? wire()`<video playsinline muted autoplay loop class="lazyload" data-src="${
+							giphy.video
+					  }"></video>`
 					: wire()`<img class="lazyload" data-src="${thumb.maxres}" alt="${track.title}">`
 			}
-			<h2>
-				<span class="opacity-50">${track.trackNumber}</span> ${track.title}
-			</h2>
+			<h2>${track.title}</h2>
 			<svg class="PlayButton" viewBox="0 0 200 200" alt="Play video">
 				<circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="antiquewhite" />
 				<polygon points="70, 55 70, 145 145, 100" fill="antiquewhite" />

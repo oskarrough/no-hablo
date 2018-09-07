@@ -90,7 +90,6 @@ header h2 {
 .Button {
 	color: black;
 	font-weight: bold;
-	font-size: x-large;
 }
 
 .Button:hover,
