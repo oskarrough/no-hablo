@@ -2,18 +2,8 @@
 
 const {hyper, wire} = hyperHTML
 
-const tracks = [].concat(...data.releases)
-const realTracks = tracks.filter(track => track.youtubeId)
-
 function List(items) {
-	return wire(items)`${items.map(ReleaseTemplate)}`
-}
-
-function ReleaseTemplate(release) {
-	return wire(release)`
-		<div class="flex flex-wrap">
-			${release.map(TrackTemplate)}
-		</div>`
+	return wire(items)`${items.map(TrackTemplate)}`
 }
 
 function TrackTemplate(track) {
@@ -34,15 +24,6 @@ function TrackTemplate(track) {
 		video: `https://media.giphy.com/media/${track.giphyId}/giphy.mp4`
 	}
 
-	// Fallback for tracks without video.
-	if (!track.youtubeId) {
-		return wire(track)`
-			<div class="Track no-focus">
-				<h2>${track.title}</h2>
-			</div>
-		`
-	}
-
 	return wire(track)`
 		<a class="Track Ratio" href="${youtubeLink}" data-fancybox="gallery">
 			${
@@ -61,10 +42,9 @@ function TrackTemplate(track) {
 }
 
 function init() {
-	// Template with video grid. Also see data.js file.
-	// hyper(document.querySelector('.VideoGrid'))`${new List(data.releases)}`
+	// Also see the data.js file.
 	const gridContainer = document.querySelector('.VideoGrid')
-	hyper(gridContainer)`${new ReleaseTemplate(realTracks)}`
+	hyper(gridContainer)`${new List(data.tracks)}`
 
 	// Firefox doesn't mute videos when they are added dynamically (via js), so…
 	for (let video of gridContainer.querySelectorAll('video')) {
@@ -81,11 +61,6 @@ function init() {
 			var caption = this.querySelector('h2').outerHTML
 			var count = '<span data-fancybox-index></span> of <span data-fancybox-count></span>'
 			return count + caption
-		},
-		i18n: {
-			en: {
-				ERROR: 'COMING SOON'
-			}
 		}
 	})
 
