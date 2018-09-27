@@ -1,37 +1,35 @@
-/* global $, data */
-
-const {hyper, wire} = hyperHTML
+/* global $, hyperHTML, data */
 
 function List(items) {
-	return wire(items)`${items.map(TrackTemplate)}`
+	return hyperHTML.wire(items)`${items.map(TrackTemplate)}`
 }
 
 function TrackTemplate(track) {
-	const youtubeLink = `https://www.youtube.com/watch?v=${
+	var youtubeLink = `https://www.youtube.com/watch?v=${
 		track.youtubeId
 	}&autoplay=1&rel=0&controls=1&list=PLGXSVM0qM_LqHgm0N99p4g9z1G6GCEu2z`
 
-	const thumb = {
+	var thumb = {
 		hq: `http://img.youtube.com/vi/${track.youtubeId}/hqdefault.jpg`,
 		maxres: `https://img.youtube.com/vi/${track.youtubeId}/maxresdefault.jpg`,
 		webp: `https://img.youtube.com/vi_webp/${track.youtubeId}/maxresdefault.webp`
 	}
 
-	const giphy = {
+	var giphy = {
 		page: `https://giphy.com/gifs/${track.giphyId}/media`,
 		small: `https://media.giphy.com/media/${track.giphyId}/200w_d.gif`,
 		social: `https://media.giphy.com/media/${track.giphyId}/giphy.gif`,
 		video: `https://media.giphy.com/media/${track.giphyId}/giphy.mp4`
 	}
 
-	return wire(track)`
+	return hyperHTML.wire(track)`
 		<a class="Track Ratio" href="${youtubeLink}" data-fancybox="gallery">
 			${
 				track.giphyId
-					? wire()`<video playsinline muted autoplay loop class="lazyload" data-src="${
+					? hyperHTML.wire()`<video playsinline muted autoplay loop class="lazyload" data-src="${
 							giphy.video
 					  }"></video>`
-					: wire()`<img class="lazyload" data-src="${thumb.maxres}" alt="${track.title}">`
+					: hyperHTML.wire()`<img class="lazyload" data-src="${thumb.maxres}" alt="${track.title}">`
 			}
 			<h2>${track.title}</h2>
 			<svg class="PlayButton" viewBox="0 0 200 200" alt="Play video">
@@ -42,13 +40,15 @@ function TrackTemplate(track) {
 }
 
 function init() {
-	// Also see the data.js file.
-	const gridContainer = document.querySelector('.VideoGrid')
-	hyper(gridContainer)`${new List(data.tracks)}`
+	var gridContainer = document.querySelector('.VideoGrid')
+	var videos = gridContainer.querySelectorAll('video')
+
+	hyperHTML(gridContainer)`${new List(data.tracks)}`
 
 	// Firefox doesn't mute videos when they are added dynamically (via js), so…
-	for (let video of gridContainer.querySelectorAll('video')) {
-		video.muted = true
+	// for (var video of videos) {
+	for (var i = 0, len = videos.length; i< len; i++) {
+		videos[i].muted = true
 	}
 
 	// Video gallery.

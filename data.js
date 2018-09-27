@@ -1,4 +1,4 @@
-const data = {}
+var data = {}
 
 // https://www.youtube.com/playlist?list=PLGXSVM0qM_LqHgm0N99p4g9z1G6GCEu2z
 
