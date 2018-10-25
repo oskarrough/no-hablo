@@ -41,13 +41,13 @@ function TrackTemplate(track) {
 
 function init() {
 	var gridContainer = document.querySelector('.VideoGrid')
-	var videos = gridContainer.querySelectorAll('video')
 
 	hyperHTML(gridContainer)`${new List(data.tracks)}`
 
 	// Firefox doesn't mute videos when they are added dynamically (via js), so…
 	// for (var video of videos) {
-	for (var i = 0, len = videos.length; i< len; i++) {
+	var videos = gridContainer.querySelectorAll('video')
+	for (var i = 0, len = videos.length; i < len; i++) {
 		videos[i].muted = true
 	}
 
